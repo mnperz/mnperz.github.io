@@ -5,6 +5,13 @@
 <body>
 <ul>
   <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">More Options</a>
+    <div class="dropdown-content" id="myDropdown">
+       	<a href="blog.html">Blog</a>
+       	<a href="help.html">Help</a>
+    </div>
+  </li>
 </ul>
 <h1>Contact Me</h1>
 <div class="anchorContainer">
@@ -13,4 +20,25 @@
 	<li><a href="https://www.facebook.com/michelle.perz">Facebook</a></li>
 </div>
 </body>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </html>

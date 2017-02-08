@@ -4,7 +4,36 @@
 </head>
 <ul>
   <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">More Options</a>
+    <div class="dropdown-content" id="myDropdown">
+       	<a href="blog.html">Blog</a>
+       	<a href="help.html">Help</a>
+       	<a href="contact.html">Contact</a>
+    </div>
+  </li>
 </ul>
 <h1>About Me</h1>
-<p>I am looking for an opportunity to work on front-end website development. </p>
+<p>I am looking for an opportunity to work on front-end development. </p>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </html>
