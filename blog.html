@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -14,27 +14,33 @@
   </li>
 </ul>
 <h1>Blog</h1>
-<p>This is my dog, Nikko!</p>
-<img src="Nikko1.jpg" alt="Nikko" style="width:400px;height:550px;">
+<body>
+
+<div class="gallery" align="center">
+	<div class="thumbnails">
+		<img onmouseover="preview.bigImg(this)" onmouseout="preview.normalImg(this)" src="Nikko1.jpg" name="img1" alt="" />
+		<img onmouseover="preview.src=sunny.jpg" name="img2" src="sunny.jpg" alt="" />
+		<img onmouseover="preview.src=fred.jpg" name="img3" src="fred.jpg" alt="" />
+		<img onmouseover="preview.src=grandma.jpg" name="img4" src="grandma.jpg" alt="" />
+	</div>
+	<div class="preview" align="center">
+		<img name="preview" onmouseover="bigImg(this)" src="Nikko1.jpg" alt="Nikko" alt=""/>
+	</div>
+</div>
+</body>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Nikko1.jpg" alt="Nikko" width="32" height="32">
+
 <script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function bigImg(x) {
+    x.style.height = "75%";
+    x.style.width = "75%";
 }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var d = 0; d < dropdowns.length; d++) {
-      var openDropdown = dropdowns[d];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+function normalImg(x) {
+    x.style.height = "15%";
+    x.style.width = "15%";
 }
 </script>
+
+<script src="dropdown.js"></script>
 </html>
