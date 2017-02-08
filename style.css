@@ -21,6 +21,12 @@ ul {
     background-color: #333;
 }
 
+div.anchorContainer
+{
+    float:left;
+    clear:left;
+}
+
 li {
     float: left;
 }
