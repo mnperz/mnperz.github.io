@@ -1,25 +1,42 @@
 body {
-	background-image:url("background.jpg");
+	background-image:url("background3.jpg");
     background-color: #78868c;
 }
 
 h1 {
-    color: #444a4c;
+    color: #3c8cc9;
     text-align: center;
     font-size:325%;
+    text-shadow:
+   -1px -1px 0 #f7f7f7,  
+    1px -1px 0 #f7f7f7,
+    -1px 1px 0 #f7f7f7,
+     1px 1px 0 #f7f7f7;
+    padding-top: 15%;
+}
+
+h2 {
+    color: #3c8cc9;
+    text-align: center;
+    font-size:325%;
+    text-shadow:
+   -1px -1px 0 #f7f7f7,  
+    1px -1px 0 #f7f7f7,
+    -1px 1px 0 #f7f7f7,
+     1px 1px 0 #f7f7f7;
 }
 
 p {
     font-family: verdana;
     font-size: 20px;
+    color: #e2f2ff;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-left:38%;
+    padding: 0%;
     overflow: hidden;
-    background-color: #333;
 }
 
 div.anchorContainer
@@ -30,18 +47,23 @@ div.anchorContainer
 
 li {
     float: left;
+    outline: 20px;
+    padding: 7px;
+
 }
 
 li a, .dropbtn {
     display: inline-block;
-    color: white;
+    color: #3c8cc9;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: #deedf9;
+    border-radius: 10px;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: #0d8ec1;
+    background-color: #216884;
 }
 
 li.dropdown {
