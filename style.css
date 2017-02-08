@@ -56,9 +56,10 @@ li.dropdown {
     z-index: 1;
 }
 
-a {
-	color: #FFF;
-}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
 a:hover {
 	color: yellow;
 	text-decoration: underline;
@@ -88,7 +89,3 @@ a:hover {
     display: block;
     text-align: left;
 }
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.show {display:block;}

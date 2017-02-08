@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="about.html">About</a></li>
@@ -13,27 +14,36 @@
     </div>
   </li>
 </ul>
+
 <h1>Blog</h1>
 <body>
 
 <div class="gallery" align="center">
 	<div class="thumbnails">
-		<img onmouseover="preview.bigImg(this)" onmouseout="preview.normalImg(this)" src="Nikko1.jpg" name="img1" alt="" />
-		<img onmouseover="preview.src=sunny.jpg" name="img2" src="sunny.jpg" alt="" />
-		<img onmouseover="preview.src=fred.jpg" name="img3" src="fred.jpg" alt="" />
-		<img onmouseover="preview.src=grandma.jpg" name="img4" src="grandma.jpg" alt="" />
+		<img onmouseover="getElementById('preview').src=this.src" src="Nikko1.jpg" alt="" />
+		<img onmouseover="getElementById('preview').src=this.src" src="fred.jpg" alt="" />
+		<img onmouseover="getElementById('preview').src=this.src" src="sunny.jpg" alt="" />
+		<img onmouseover="getElementById('preview').src=this.src" src="grandma.jpg" alt="" />
 	</div>
+
+
 	<div class="preview" align="center">
-		<img name="preview" onmouseover="bigImg(this)" src="Nikko1.jpg" alt="Nikko" alt=""/>
+		<img id="preview" src="Nikko1.jpg" alt="" />
 	</div>
+
+
 </div>
 </body>
-<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Nikko1.jpg" alt="Nikko" width="32" height="32">
+<!-- <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="3%" src="Nikko1.jpg" alt="Nikko">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="3%" src="sunny.jpg" alt="" />
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="3%" src="fred.jpg" alt="" />
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="3%" src="grandma.jpg" alt="" />
+
 
 <script>
 function bigImg(x) {
-    x.style.height = "75%";
-    x.style.width = "75%";
+    x.style.height = "60%";
+    x.style.width = "60%";
 }
 
 function normalImg(x) {
@@ -41,6 +51,6 @@ function normalImg(x) {
     x.style.width = "15%";
 }
 </script>
-
+-->
 <script src="dropdown.js"></script>
 </html>
